@@ -8,7 +8,7 @@ const fastify = Fastify({
 
 // Declare a route
 fastify.get('/', async function handler (request, reply) {
-  const stream = fs.createReadStream('./package.json', 'utf8')
+  const stream = fs.createReadStream('./sample.txt', 'utf8')
   reply.header('Content-Type', 'application/octet-stream')
   reply.send(stream);
 })
